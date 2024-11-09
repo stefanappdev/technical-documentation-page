@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link href="./styles.css" rel="stylesheet"/>
 <title>JS technical documentation</title>
-<script src="script.js"></script>
+
 
 
 </head>
 
-<body>
+<body id="app-bg">
 
 
 
@@ -64,9 +64,44 @@
 
 </div>
 
-<div id="theme-slider">
-<img id="slider-img" alt="switch to dark theme" src="./images/toggle-off.png" />
+<div id="theme-settings-container" >
+<img  id="theme-settings" class="light dark" alt="switch to dark theme" src="./images/toggle-off.png" />
 </div>
+
+<script>
+let bg=document.querySelector("#app-bg");
+let themesettings=document.querySelector("#theme-settings");
+
+
+//to change theme from light to dark
+
+
+const toogleTheme=()=>{
+	if(themesettings.classList.contains("light")){
+	
+		themesettings.classList.add("dark");
+		themesettings.classList.remove("light");
+		
+		bg.style.backgroundColor="#3443eb";
+		themesettings.setAttribute("src","./images/toggle-on.png");
+		
+		
+	}else if(themesettings.classList.contains("dark")){
+		themesettings.classList.add("light");
+		themesettings.classList.remove("dark");
+		bg.style.backgroundColor="#efeff6";
+		themesettings.setAttribute("src","./images/toggle-off.png");
+	}
+	
+	console.log("sucess");
+}
+
+
+themesettings.addEventListener("click",toogleTheme);
+
+
+</script>
+
 
 
 </div>

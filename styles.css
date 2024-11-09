@@ -18,12 +18,12 @@
 		display:none;
 	}
 	
-	#theme-slider{
+	#theme-settings-container{
 		margin-left:2px;
 		margin-right:2px;
 	}
 	
-	#theme-slider>img{
+	#theme-settings-container>img{
 		width:40px;
 		height:30px;
 		
