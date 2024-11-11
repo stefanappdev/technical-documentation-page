@@ -68,43 +68,7 @@
 <img  id="theme-settings" class="light dark" alt="switch to dark theme" src="./images/toggle-off.png" />
 </div>
 
-<script>
-let bg=document.querySelector("#app-bg");
-let themesettings=document.querySelector("#theme-settings");
 
-
-
-//to change theme from light to dark
-
-
-const toogleTheme=()=>{
-	if(themesettings.classList.contains("light")){
-	
-		themesettings.classList.add("dark");
-		themesettings.classList.remove("light");
-		themesettings.alt="switch to light mode"
-		bg.style.backgroundColor="#1a1634";
-		bg.style.color="white";
-		themesettings.setAttribute("src","./images/toggle-on.png");
-		
-		
-	}else if(themesettings.classList.contains("dark")){
-		themesettings.classList.add("light");
-		themesettings.classList.remove("dark");
-		themesettings.alt="switch to dark mode"
-		bg.style.color="black";
-		bg.style.backgroundColor="#efeff6";
-		themesettings.setAttribute("src","./images/toggle-off.png");
-	}
-	
-	console.log("sucess");
-}
-
-
-themesettings.addEventListener("click",toogleTheme);
-
-
-</script>
 
 
 
@@ -112,34 +76,36 @@ themesettings.addEventListener("click",toogleTheme);
 
 
 
-<div id="content-grid">
+<div id="content-box" class="grid">
 
 
 	<div id="sidebar">
+	
+		<h3> Table of Contents </h3>
 
 		<div> <a href="#intro">Introduction</a> </div>
 
 		<div> 
-			<a href="#What-you-should-already-know">
+			<a  href="#What-you-should-already-know">
 				<span>What you should already know</span>
 			</a> 
 
 		</div>
 
 
-		<div> <a href="#hello-world">Hello World</a> </div>
+		<div> <a  href="#hello-world">Hello World</a> </div>
 
-		<div> <a href="#variables">variables</a> </div>
+		<div> <a  href="#variables">variables</a> </div>
 
-		<div> <a href="#declaring-variables">declaring variables</a> </div>
+		<div> <a  href="#declaring-variables">declaring variables</a> </div>
 
-		<div> <a href="#variable-scope">variable scope</a> </div>
+		<div> <a  href="#variable-scope">variable scope</a> </div>
 
-		<div> <a href="#while">while loops</a> </div>
+		<div> <a  href="#while">while loops</a> </div>
 
-		<div> <a href="#if-else-statement">if else statement</a> </div>
+		<div> <a  href="#if-else-statement">if else statement</a> </div>
 
-		<div> <a href="#function-declarations">function declarations</a> </div>
+		<div> <a  href="#function-declarations">function declarations</a> </div>
 
 		<div> <a href="#reference">Reference</a> </div>
 
@@ -347,6 +313,53 @@ themesettings.addEventListener("click",toogleTheme);
 			</main>
 	
 	</div>
+	
+	
+	
+	<script>
+let bg=document.querySelector("#app-bg");
+let themesettings=document.querySelector("#theme-settings");
+let content=document.querySelector("#content");
+let sidebar=document.querySelector("#sidebar div");
+
+
+
+
+//to change theme from light to dark
+
+
+const toogleTheme=()=>{
+	if(themesettings.classList.contains("light")){
+	
+		themesettings.classList.add("dark");
+		themesettings.classList.remove("light");
+		themesettings.alt="switch to light mode"
+		bg.style.backgroundColor="#1a1634";
+		sidebar.style.color="white";
+		content.style.color="white";
+		
+		
+		themesettings.setAttribute("src","./images/toggle-on.png");
+		
+		
+	}else if(themesettings.classList.contains("dark")){
+		themesettings.classList.add("light");
+		themesettings.classList.remove("dark");
+		themesettings.alt="switch to dark mode";
+		content.style.color="black";
+		sidebar.style.color="black";
+		bg.style.backgroundColor="#efeff6";
+		themesettings.setAttribute("src","./images/toggle-off.png");
+	}
+	
+	console.log("sucess");
+}
+
+
+themesettings.addEventListener("click",toogleTheme);
+
+
+</script>
 
 </body>
 
